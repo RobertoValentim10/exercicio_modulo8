@@ -1,51 +1,30 @@
-const form = document.getElementById('form-agenda')
+const form = document.getElementById ('form-agenda')
 
-
-
-let linhas = '';
+let dados = ''
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
 
-    adicionarDados()
-    adicionarlinhas()
-    atualizarDados()
-    atualizarLinhas()
-});
+    adicionarLinha()
+    atualizarTabela()
 
-function adicionarDados(){
-    const inputNomeContato = document.getElementById ('nomes-contatos')
-    const inputNumeroContato = document.getElementById ('numeros-contatos')
+})
 
+function adicionarLinha(){
+    const inputNomeContato = document.getElementById('nomes-contatos')
+    const inputNumeroContato = document.getElementById('numeros-contatos')
+    const inputDataContato = document.getElementById('data')
 
-    let dados = '<tr>'
-    dados += `<td>${inputNomeContato.valeu}</td>`
-    dados += `<td>${inputNumeroContato.valeu}</td>`
-    dados += '</tr>'
+    let linha = '<tr>'
+    linha += `<td>${inputNomeContato.value}</td>`
+    linha += `<td>${inputNumeroContato.value}</td>`
+    linha += `<td>${inputDataContato.value}</td>`
+    linha += '<tr>'
 
-    linhas += dados
-
-    inputNomeContato.valeu = ''
-    inputNumeroContato.valeu = ''
-
+    dados += linha
 }
 
-function adicionarlinhas(){
-    const corpoTabela = document.querySelector('tbody')
-    corpoTabela.innerHTML = linhas
-}
-
-function atualizarDados(){
-    const addDados = adicionarDados()
-    document.getElementById('nome-add').innerHTML = addDados
-    document.getAnimations('numero-add').innerHTML = addDados
-}
-
-function atualizarLinhas() {
-    let atlLinhas = 0
-
-    while (atlLinhas < numeros.length) {
-        atlLinhas ++
-    }
-
+function atualizarTabela(){
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML = dados; /* Para inserir um conteudo dentro de uma tag */
 }
