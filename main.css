@@ -40,22 +40,22 @@ form {
 }
 
 form input {
-    font-size: 23px;
+    font-size: 20px;
     background-color: aliceblue;
     border: none;
     border-bottom: 2px solid #000; /* Colocar uma barra ou fa zer uma divisão na parte de baixo */
     margin-bottom: 56px; /* Tirei do form e coloquei no form input, pq não estava conseguindo deixar o space-between funcionar */
-    padding: 8px;
+    padding: 6px;
 }
 
 form button {
     background-color: #009432;
     color: aliceblue;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 7px;
     border-bottom: 2px solid #000
 }
 
